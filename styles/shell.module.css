@@ -1,0 +1,449 @@
+.shell {
+  min-height: 100vh;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 56px 220px 1fr;
+  grid-template-rows: 34px 28px 1fr 24px;
+  background: #0f0f11;
+  color: #cfcfcf;
+  overflow: hidden;
+}
+
+.shellCollapsed {
+  grid-template-columns: 56px 0 1fr;
+}
+
+.windowBar {
+  grid-column: 1 / -1;
+  height: 34px;
+  background: linear-gradient(180deg, #1b1733, #141226);
+  border-bottom: 1px solid #2a2344;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 12px;
+  color: #b8b1d6;
+}
+
+.windowControls {
+  position: absolute;
+  left: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.controlClose,
+.controlMin,
+.controlMax {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3d3560;
+}
+
+.controlClose {
+  background: #ff5f56;
+}
+
+.controlMin {
+  background: #ffbd2e;
+}
+
+.controlMax {
+  background: #27c93f;
+}
+
+.windowTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  background: rgba(88, 82, 118, 0.45);
+  border: 1px solid rgba(170, 160, 220, 0.45);
+  color: #cfc9e6;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  width: 440px;
+  height: 68%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.windowIcon {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.windowText {
+  font-size: 14px;
+  color: #c6c0e2;
+  margin-left: 2px;
+}
+
+.windowSpacer {
+  flex: 1;
+}
+
+.windowKey {
+  padding: 3px 8px;
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 12px;
+  color: #d9d4f2;
+}
+
+.menuBar {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 10px;
+  background: #2c2c2c;
+  border-bottom: 1px solid #1f1f22;
+}
+
+.menuItem {
+  background: transparent;
+  border: none;
+  color: #c9c9c9;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.activityBar {
+  grid-row: 3 / 4;
+  background: #141417;
+  border-right: 1px solid #1f1f22;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.activityTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.activityBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.activityButton,
+.activityIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #9f9f9f;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.activityButton {
+  color: #cfcfcf;
+  font-size: 16px;
+}
+
+.activityIcon:hover,
+.activityButton:hover {
+  border-color: #2a2a2f;
+  color: #ffffff;
+}
+
+.explorer {
+  grid-row: 3 / 4;
+  background: #17171a;
+  border-right: 1px solid #1f1f22;
+  transition: width 0.2s ease, opacity 0.2s ease;
+  overflow: hidden;
+}
+
+.explorerOpen {
+  width: 220px;
+  opacity: 1;
+}
+
+.explorerClosed {
+  display:none;
+}
+
+
+.explorerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #b5b5b5;
+}
+
+.explorerActions {
+  display: flex;
+  gap: 6px;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  color: #bdbdbd;
+  padding: 6px 12px;
+}
+
+.fileList {
+  list-style: none;
+  margin: 0;
+  padding: 0 4px 12px;
+}
+
+.fileItem {
+  width: 100%;
+  text-align: left;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #cfcfcf;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fileItem:hover {
+  background: #1f1f24;
+}
+
+.fileActive {
+  background: #232327;
+  border-color: #2c2c31;
+  color: #ffffff;
+}
+
+.fileIcon {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #3a3a3a;
+  display: inline-block;
+}
+
+.tsx {
+  background: #007acc;
+}
+
+.ts {
+  background: #3178c6;
+}
+
+.js {
+  background: #f7df1e;
+}
+
+.html {
+  background: #e34f26;
+}
+
+.css {
+  background: #2965f1;
+}
+
+.json {
+  background: #cbcb41;
+}
+
+.md {
+  background: #8b8b8b;
+}
+
+.pdf {
+  background: #d23a3a;
+}
+
+.mainArea {
+  grid-row: 3 / 4;
+  display: grid;
+  grid-template-rows: 30px 30px 1fr;
+  min-width: 0;
+  grid-column: 3 / -1;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.shellCollapsed .mainArea {
+  grid-column: 2 / -1;
+}
+
+.tabBar {
+  background: #1a1a1d;
+  border-bottom: 1px solid #1f1f22;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 6px;
+}
+
+.tabItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border-radius: 5px 5px 0 0;
+  background: #222229;
+  color: #cfcfcf;
+  font-size: 12px;
+  cursor: pointer;
+  border-top: 2px solid transparent;
+}
+
+.tabActive {
+  background: #2a2a31;
+  color: #ffffff;
+  border-top-color: #007acc;
+}
+
+.tabClose {
+  margin-left: 6px;
+  background: transparent;
+  border: none;
+  color: #9fa0a6;
+  cursor: pointer;
+}
+
+.tabAdd {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid #2a2a2f;
+  color: #cfcfcf;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.topbar {
+  background: #1b1b1f;
+  border-bottom: 1px solid #1f1f22;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  font-size: 12px;
+  color: #9fa0a6;
+}
+
+.breadcrumbs {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topbarActions {
+  display: flex;
+  gap: 8px;
+}
+
+.iconButton {
+  border: 1px solid #2a2a2f;
+  background: #1b1b1f;
+  color: #cfcfcf;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.content {
+  padding: 0;
+  background: radial-gradient(1200px 500px at 10% -10%, rgba(255, 255, 255, 0.06), transparent),
+    #101012;
+  overflow: auto;
+  height: 100%;
+  min-height: 0;
+}
+
+.filePane {
+  max-width: 640px;
+  padding: 24px;
+  border-radius: 12px;
+  background: #1b1b1f;
+  border: 1px solid #2a2a2f;
+  color: #cfcfcf;
+}
+
+.filePaneHeader {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.filePaneBody {
+  font-size: 13px;
+  color: #a9a9b2;
+  line-height: 1.6;
+}
+
+.statusBar {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  background: #007acc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-size: 10px;
+  color: #ffffff;
+}
+
+.statusLeft,
+.statusRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statusItem {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.statusItem:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 960px) {
+  .shell {
+    grid-template-columns: 56px 1fr;
+    grid-template-rows: 34px 30px 1fr 28px;
+  }
+
+  .explorer {
+    position: absolute;
+    left: 56px;
+    top: 64px;
+    bottom: 28px;
+    z-index: 10;
+    box-shadow: 8px 0 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .mainArea {
+    grid-column: 2 / -1;
+  }
+}

@@ -1,0 +1,159 @@
+.projects {
+  padding: 32px;
+  color: #d6d6d6;
+}
+
+.header {
+  margin-bottom: 18px;
+}
+
+.kicker {
+  color: #7cc7b0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.sub {
+  color: #8a8a8a;
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid #2a2a2f;
+  border-radius: 10px;
+  background: #1b1b1f;
+  padding: 16px 18px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #3a3a44;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cardSubtitle {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #bdbdbd;
+}
+
+.cardLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.cardActions {
+  display: flex;
+  gap: 8px;
+}
+
+.cardActions :hover {
+  color: rgb(147, 82, 82);
+  border: 1px solid rgb(119, 71, 71);
+}
+
+.badge,
+.badgeAlt {
+  border: 1px solid #2a2a2f;
+  background: #1f1f24;
+  color: #bdbdbd;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.badge :hover {
+  color: whitesmoke;
+}
+
+.badgeAlt {
+  border-color: #3b2b5f;
+  color: #bda7ff;
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.cardDesc {
+  color: #9a9a9a;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  border: 1px solid #2a2a2f;
+  background: #1f1f24;
+  color: #a7a7a7;
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.pink {
+  border-top: 2px solid #f26ac8;
+}
+
+.violet {
+  border-top: 2px solid #8b6bff;
+}
+
+.teal {
+  border-top: 2px solid #53d3c0;
+}
+
+.blue {
+  border-top: 2px solid #4aa3ff;
+}
+
+.orange {
+  border-top: 2px solid #f59e0b;
+}
+
+.orange {
+  border-top: 2px solid #ff6f00;
+}
+
+.green {
+  border-top: 2px solid #004b13;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
